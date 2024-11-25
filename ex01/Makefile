@@ -1,20 +1,20 @@
-C++ = c++
+CXX = c++
 
 FLAGS = -Wall -Wextra -Werror
 
 NAME = PhoneBook
 
-SRC = PhoneBook.cpp utilis.cpp
+SRC = PhoneBook.cpp utilis.cpp main.cpp
 
 OBJE = ${SRC:.cpp=.o}
 
 all: ${NAME}
 
 ${NAME} : ${OBJE}
-	${C++} ${FLAGS} -o ${NAME} ${OBJE}
+	${CXX} ${FLAGS} -o ${NAME} ${OBJE}
 
 %.o: %.cpp
-	${C++} ${FLAGS} -c $< -o $@
+	${CXX} ${FLAGS} -c $< -o $@
 
 clean:
 		rm -f ${OBJE}
